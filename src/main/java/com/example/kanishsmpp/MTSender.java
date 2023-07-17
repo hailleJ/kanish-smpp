@@ -31,8 +31,8 @@ public class MTSender {
         MessageResponse messageResponse = senderManager
                 .getClient()
                 .send(Message.
-                        simple("Dear Customer your subscription  to Cubetravel_Homeland_9378 is Successful as per "+ LocalDate.now() +". After 3 days of free trial you will pay 2 birr per day to the service http://service.cubetravel.et/. To unsubscribe STOP 9378")
-                        .from("9378").to("251988170681").build());
+                        simple("text")
+                        .from("SC").to("msisdn").build());
         log.info("messageId: {}",messageResponse.getSmscMessageID());
     }
 
